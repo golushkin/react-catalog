@@ -1,0 +1,21 @@
+.main {
+  flex: 1 0 auto;
+  display: flex;
+  padding: 0 2px;
+  margin: 50px 0;
+  justify-content: space-between;
+  @media screen and (max-width: 585px){
+    flex-direction: column;
+  }
+
+  & .bg-image{
+    width: 120px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    & img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

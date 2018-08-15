@@ -1,0 +1,140 @@
+aside{
+  padding: 10px;
+  flex-basis: calc(30% - 20px);
+  min-width: 195px;
+  background: #fff;
+  max-width: 210px;
+  border: 1px solid silver;
+  border-radius: 2px;
+  box-shadow: 0 0 1px rgba(0,0,0,0.2);
+  @media screen and (max-width: 585px) {
+    &{
+      display: none;
+    }
+  }
+  &.active{
+    margin: 0 auto;
+  }
+  & input[type='checkbox']{
+    margin-right: 5px;
+  }
+  & label{
+    cursor: pointer;
+    font-size: 15px;
+    color: #191919;
+  }
+  & .aside{
+    margin-bottom: 20px;
+    & ul{
+      margin-top: 3px;
+    }
+    &>div{
+      margin-top: 5px;
+    }
+  }
+  & .btn-aside{
+    text-align: center;
+    padding: 2px 0;
+    background: #fff;
+    border: 1px solid silver;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000;
+    &:hover{
+      box-shadow: inset 0 0 1px rgba(0,0,0,0.5); /* Параметры тени */
+    }
+    &:active{
+      background: #F2F2F2;
+      box-shadow: inset 0 0 2px rgba(0,0,0,0.5); /* Параметры тени */
+    }
+  }
+  & select{
+    width: 50%;
+    border: 1px solid silver;
+    padding: 3px;
+    outline: none;
+    &:first-child{
+      border-radius: 5px 0 0 5px;
+    }
+    &:last-child{
+      border-radius: 0 5px 5px 0;
+    }
+    &:focus{
+      border-color: #000;
+    }
+  }
+  & .min-max{
+    display: flex;
+    & input{
+      width: calc(50% - 4px);
+      border: 1px solid silver;
+      outline: none;
+      padding: 3px;
+      &:first-child{
+        border-radius: 5px 0 0 5px;
+      }
+      &:last-child{
+        border-radius: 0 5px 5px 0;
+      }
+      &:focus{
+        border-color: #000;
+      }
+    }
+  }
+  & .aside-company{
+    position: relative;
+    z-index: 0;
+    & .aside-company-all-block{
+      padding: 10px;
+      border: 1px solid silver;
+      border-radius: 4px;
+      background: #fff;
+      overflow: scroll;
+      height: 130px;
+      position: absolute;
+      right: -87%;
+      top: 62%;
+      display: none;
+      &.active{
+        display: block;
+      }
+  }
+  }
+  & .aside-platform{
+    position: relative;
+    & .platform-block{
+      padding: 10px;
+      border: 1px solid silver;
+      border-radius: 4px;
+      background: #fff;
+      overflow: scroll;
+      height: 130px;
+      position: absolute;
+      right: -87%;
+      top: 62%;
+      display: none;
+      &.active{
+        display: block;
+      }
+    }
+  }
+  & .aside-color{
+    position: relative;
+    z-index: 0;
+    & .color-block{
+      padding: 10px;
+      border: 1px solid silver;
+      border-radius: 4px;
+      background: #fff;
+      overflow: scroll;
+      height: 130px;
+      position: absolute;
+      right: -87%;
+      top: 62%;
+      display: none;
+      &.active{
+        display: block;
+      }
+    }
+  }
+}

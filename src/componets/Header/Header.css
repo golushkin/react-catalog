@@ -1,0 +1,108 @@
+header{
+  margin-top: 40px;
+  flex: 0 0 auto;
+  & input[type='text']{
+    width: 98.9%;
+    height: 27px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    outline: none;
+    padding: 0 5px;
+    &:focus{
+      border-color: #000;
+    }
+  }
+  & .header-nav{
+    & .header-modal{
+      z-index: 1;
+      position: absolute;
+      display: none;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      &.active{
+        display: block;
+      }
+      & .modal{
+        background: #fff;
+        width: 66%;
+        margin: 3% auto;
+        padding: 5px 10px;
+        border-radius: 5px;
+        min-height: 20%;
+        & .modal-result{
+          & article{
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid silver;
+            @media screen and (max-width: 600px){
+              flex-direction: column;
+            }
+            & .img-title{
+              display: flex;
+              & .img{
+                flex-basis: 15%;
+                & img{
+                  width: 100%;
+                }
+                @media screen and (max-width: 1441px){
+                  &{
+                    flex-basis: 25%;
+                  }
+                }
+                @media screen and (max-width: 1025px){
+                  &{
+                    flex-basis: 40%;
+                  }
+                }
+                @media screen and (max-width: 600px){
+                  width: 45%;
+                }
+                @media screen and (max-width: 400px){
+                  width: 50%;
+                }
+              }
+              & .title{
+                margin: 0 20px;
+                & .title-desc{
+                  margin-top: 10px;
+                  @media screen and (max-width: 600px){
+                    display: none;
+                  }
+                }
+              }
+              @media screen and (max-width: 1000px){
+                flex-direction: column;
+                align-items: center;
+              }
+            }
+            & .price{
+              flex-basis: 28%;
+              color: #000;
+              @media screen and (max-width: 1350px){
+                &{
+                  flex-basis: 40%;
+                }
+              }
+              @media screen and (max-width: 1025px){
+                &{
+                  flex-basis: 85%;
+                }
+              }
+              @media screen and (max-width: 1000px){
+                &{
+                  margin-top: 20px;
+                  width: 100%;
+                  text-align: right;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
